@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>yie&#39;s Blog</title>
   
-  
+  <subtitle>The power of imagination makes us infinite,Welcome to yie&#39;s Blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yieeo.github.io/"/>
-  <updated>2018-08-29T13:16:55.226Z</updated>
+  <updated>2018-09-21T00:05:00.763Z</updated>
   <id>https://yieeo.github.io/</id>
   
   <author>
@@ -17,19 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://yieeo.github.io/2018/08/29/hello-world/"/>
-    <id>https://yieeo.github.io/2018/08/29/hello-world/</id>
-    <published>2018-08-29T06:09:24.116Z</published>
-    <updated>2018-08-29T13:16:55.226Z</updated>
+    <title>The History Of JavaScript</title>
+    <link href="https://yieeo.github.io/2017/11/21/JavaScript-history/"/>
+    <id>https://yieeo.github.io/2017/11/21/JavaScript-history/</id>
+    <published>2017-11-20T23:53:54.000Z</published>
+    <updated>2018-09-21T00:05:00.763Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>JavaScript是由Netscape Communications Corporation(网景公司)程序员Brendan Eich(布兰登.艾克)于1995年创造出来的.Eich只用了10天就开发出了这门脚本语言,最初命名为Mocha.</p><p>1995年9月网景公司在自己的Netscape Navigator浏览器2.0中将这门语言改名为LiveScript.同年12月,网景公司为了将这门语言搭上Java这个编程语言”热词”,随后又改名为JavaScript,但是这门语言与Java没有任何关系.随后JavaScript在浏览器上大获成功,不久后微软公司在自己的Internet Explorer浏览器上推出了JScript,与网景公司进行同台竞争.JScript也是一种JavaScript的实现,这两个的语言版本的共存使得浏览器的语言标准化的缺失.微软在自己的网页技术上加入一些的自己的专属方法,使得网页在不同的浏览器的效果呈现出的不同的效果,程序员写一份代码无法在不同的浏览器上显示出相同的效果,兼容相应的浏览器必须写多套的代码.语言实现的不同专有化文档对象模型的差异,成为了网络上普及JavaScript的阻碍.</p><p>终于在1996年11月,网景公司正式向ECMA(欧洲计算机制造商协会)提交语言标准.1997年6月,ECMA以JavaScript语言为基础制定了ECMAScript标准规范ECMA-262.ECMA标准.流程以循环方式运行 - ECMAScript 2于1998年发布,ECMAScript 3于1999年发布(演变为今天的现代JavaScript).尽管微软开始用JScript语言实现一些提议,但很明显微软不会在Internet Explorer中实现JavaScript.2005年,Eich和Mozilla加入ECMA协助E4X(ECMA-357),与Macromedia(被Adobe收购)合作,他们正致力于在ActionScript 3中实施E4X.这种合作的目标是标准化AS3中的内容并在SpiderMonkey中实现它.因此,Adobe发布了Tamarin,一个源自AVM2的开放课程项目.<br>开源社区和开发者社区也在努力彻底改变JavaScript以及可以用它做些什么,社区的影响达到了顶峰,Jesse James Garrett于2005年发布了一篇论文,其中描述了JavaScript支持的一组技术作为支柱.他创造了“Ajax”这个词.该文引发了大量开发人员倾向于JavaScript以及围绕它的开源社区和库.此外,jQuery,Prototype和Dojo是新发布的库之一.Ajax的优势使JavaScript成为人们关注的焦点,并带来了更多专业的编程注意力.结果是全面的框架和库的增加,以及在Web浏览器之外增加JavaScript的使用,正如服务器端JavaScript平台的激增.</p><p>截至2016年,统计数据显示,约92％的网站使用JavaScript - 其中包括一些全球最大的网站,如Google和Facebook.并且由于JavaScript,使这些网站成为现实的元素是可能的.例如,如果没有JavaScript,我们就不会拥有我们习以为常的实时通知.今天,JavaScript仍然无处不在 - 它是最常用的客户端脚本语言.JavaScript被写入HTML文档,并以许多独特的方式实现与网页的交互.例如,由于JavaScript,我们可以自动安排约会和玩在线游戏.此外,诸如Node.js之类的新开发允许在服务器端使用JavaScript,而诸如HTML5之类的API允许控制用户媒体和其他设备功能.</p><h4 id="JavaScript的组成部分"><a href="#JavaScript的组成部分" class="headerlink" title="JavaScript的组成部分"></a>JavaScript的组成部分</h4><ul><li>ECMAScript,描述了该语言的语法和基本对象</li><li>DOM(文档对象模型),描述了处理网页内容的方法和接口</li><li>BOM(浏览器对象模型),描述了与浏览器进行交互的方法和接口</li></ul><h4 id="JavaScript的基本特点"><a href="#JavaScript的基本特点" class="headerlink" title="JavaScript的基本特点"></a>JavaScript的基本特点</h4><p>JavaScript通常缩写为JS,是一种高级的,解释执行的编程语言.JavaScript是一门基于原型和函数先行的语言,是一门多范式的语言,它支持面向对象编程,命令式编程,以及函数式编程.随着最新的HTML5和CSS3语言标准的推行它还可以用于游戏,桌面和移动应用程序的开发和在服务器端网络环境运行,如Node.js</p><p>JavaScript由ECMA通过ECMAScript实现语言的标准化,已经被世界上绝大多数浏览器所使用,也被世界上的主流浏览器(Chrome,FireFox,Opera,Safari,IE)支持.</p><h4 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h4><p>既然谈到了浏览器,就不得不谈谈现在的主流浏览器的内核,浏览器内核可以分为两部分:渲染引擎和JS引擎.最开始渲染引擎和JS引擎并没有区分的很明确,后来JS引擎(最著名的JS引擎就是Google的V8引擎,V8引擎也促进了后来Node.js的诞生)越来越独立,内核倾向于只指渲染引擎.</p><ul><li>Chrome浏览器内核: 统称为Chromium内核或Chrome内核,以前是Webkit内核,现在是Blink内核</li><li>FireFox浏览器内核: Gecko内核</li><li>Opera浏览器内核: 最初是自己的Presto内核,后与Google一起研发内核,使用过Webkit内核,现在是Blink内核</li><li>Safari浏览器内核: Webkit内核</li><li>IE浏览器内核: Trident内核</li></ul><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="noopener">参考链接</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;JavaScript是由Netscape Communications Corporation(网景公司)程序员Brendan Eich(布兰登.艾克)于1995年创造出来的.Eich只用了10天就开发出了这门脚本语言,最初命名为Mocha.&lt;/p&gt;
+&lt;p&gt;1995年9月网
       
     
     </summary>
