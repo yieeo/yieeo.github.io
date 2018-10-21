@@ -1,0 +1,321 @@
+<!DOCTYPE html><html prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>JavaScript RegExp Object · yie's Blog</title><meta name="description" content="JavaScript RegExp Object - yie"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.ico"><link rel="stylesheet" href="//at.alicdn.com/t/font_1472710214_6648843.css"><link rel="stylesheet" href="//raw.githack.com/xwartz/hexo-theme-nuna/next/source/style/main.css?v=1.0.3"></head><body class="pupa"><div class="loading-bar"></div><main><div class="post post"><article itemscope itemtype="http://schema.org/Article" class="hentry"><div class="container"><div class="entry-header"><h1 class="entry-title">JavaScript RegExp Object</h1><div class="entry-description"></div><div class="entry-meta"><time itemprop="datePublished" datetime="Wednesday, March 21st 2018, 2:33:28 pm" class="updated">Mar 21, 2018</time><em class="post-count">1,798 words</em></div></div><div itemprop="articleBody" class="entry-content"><h4 id="创建正则对象"><a href="#创建正则对象" class="headerlink" title="创建正则对象"></a>创建正则对象</h4><p>构建函数RegExp创建正则对象</p>
+<blockquote>
+<p>var reg = new RegExp(‘i$’); // reg匹配以i字母结尾的字符串</p>
+</blockquote>
+<p>使用正则字面量</p>
+<blockquote>
+<p>var reg = /i$/;</p>
+</blockquote>
+<h4 id="正则表达式字符"><a href="#正则表达式字符" class="headerlink" title="正则表达式字符"></a>正则表达式字符</h4><p>反斜杠<code>\</code>在正则表达式中表示转义序列</p>
+<blockquote>
+<p>特殊符号:</p>
+</blockquote>
+<blockquote>
+<p>^ $ . * + ? = ! | \ / ( ) [ ] { }</p>
+</blockquote>
+<p>如果要在正则表达式中匹配特殊符号,就应该在特殊符号前面的加上反斜杠<code>\</code>进行转义</p>
+<blockquote>
+<p>var reg = /\$/; // reg匹配$符号</p>
+</blockquote>
+<p>字面量字符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字符</th>
+<th style="text-align:left">匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\o</td>
+<td style="text-align:left">NUL字符(\u0000)</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">制表符(\u0009)</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">换行符(\u000A)</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:left">垂直制表符(\u000B)</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">换页符</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">回车符</td>
+</tr>
+<tr>
+<td style="text-align:left">\xnn</td>
+<td style="text-align:left">十六进制数nn指定拉丁字符,如: \x0A等同于\n</td>
+</tr>
+<tr>
+<td style="text-align:left">\uxxxx</td>
+<td style="text-align:left">十六进制xxxx指定的Unicode字符,如: \u0009等同于\t</td>
+</tr>
+</tbody>
+</table>
+<p>字符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字符</th>
+<th style="text-align:left">匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[…]</td>
+<td style="text-align:left">中括号内的任意字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[^…]</td>
+<td style="text-align:left">非中括号内的任意字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[0-9]</td>
+<td style="text-align:left">0-9之间的数字</td>
+</tr>
+<tr>
+<td style="text-align:left">[a-z]</td>
+<td style="text-align:left">小写拉丁字母</td>
+</tr>
+<tr>
+<td style="text-align:left">[A-Z]</td>
+<td style="text-align:left">大写拉丁字母</td>
+</tr>
+<tr>
+<td style="text-align:left">[ 0-9a-zA-Z ]</td>
+<td style="text-align:left">数字和大小写拉丁字母</td>
+</tr>
+<tr>
+<td style="text-align:left">.</td>
+<td style="text-align:left">除换行符和其它Unicode行终止符之外的任意字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\s</td>
+<td style="text-align:left">任意Unicode空白符</td>
+</tr>
+<tr>
+<td style="text-align:left">\S</td>
+<td style="text-align:left">任意非Unicode空白符</td>
+</tr>
+<tr>
+<td style="text-align:left">\d</td>
+<td style="text-align:left">任意ASCII码数字,等同于[0-9]</td>
+</tr>
+<tr>
+<td style="text-align:left">\D</td>
+<td style="text-align:left">任意非ASCII码数字字符,等同于[^0-9]</td>
+</tr>
+<tr>
+<td style="text-align:left">\w</td>
+<td style="text-align:left">等同于[a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td style="text-align:left">\W</td>
+<td style="text-align:left">等同于[^a-zA-Z0-9_]</td>
+</tr>
+</tbody>
+</table>
+<p>贪婪的重复字符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字符</th>
+<th style="text-align:left">匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">{n,m}</td>
+<td style="text-align:left">至少n次,但不能超过m次</td>
+</tr>
+<tr>
+<td style="text-align:left">{n,}</td>
+<td style="text-align:left">至少n次</td>
+</tr>
+<tr>
+<td style="text-align:left">{n}</td>
+<td style="text-align:left">刚好n次</td>
+</tr>
+<tr>
+<td style="text-align:left">?</td>
+<td style="text-align:left">零次或者一次,等同于{0,1}</td>
+</tr>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">至少一次,等同于{1,}</td>
+</tr>
+<tr>
+<td style="text-align:left">*</td>
+<td style="text-align:left">零次或者多次,等同于{0,}</td>
+</tr>
+</tbody>
+</table>
+<p>非贪婪的重复匹配只需要在贪婪的重复字符后面加上一个<code>?</code>,且问好之后没有其它的表达式字符,不然会忽略非贪婪匹配</p>
+<p>选择,分组和引用</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字符</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left"></td>
+<td>表示或,用于分隔选择</td>
+</tr>
+<tr>
+<td style="text-align:left">()</td>
+<td style="text-align:left">子表达式(子模式),引用子模式匹配结果</td>
+</tr>
+<tr>
+<td style="text-align:left">(?:)</td>
+<td style="text-align:left">子表达式(子模式),引用子模式匹配结果,匹配结果不显示在正则匹配结果中</td>
+</tr>
+<tr>
+<td style="text-align:left">\n(n为数字)</td>
+<td style="text-align:left">引用对应的子模式匹配结果</td>
+</tr>
+</tbody>
+</table>
+<p>位置字符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字符</th>
+<th style="text-align:left">匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">字符串的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">$</td>
+<td style="text-align:left">字符串的结尾</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:left">位于\w和\W的边界或者位于一个ASCII单词字符与一个字符串开头和结尾之间的边界</td>
+</tr>
+<tr>
+<td style="text-align:left">\B</td>
+<td style="text-align:left">非词语之间的位置</td>
+</tr>
+<tr>
+<td style="text-align:left">(?=p)</td>
+<td style="text-align:left">正前向声明,要求接下来的字符与模式p匹配,但不包括匹配中的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">(?!p)</td>
+<td style="text-align:left">反前向声明,要求接下来的字符不与模式p匹配</td>
+</tr>
+</tbody>
+</table>
+<h4 id="正则对象标志-属性和方法"><a href="#正则对象标志-属性和方法" class="headerlink" title="正则对象标志,属性和方法"></a>正则对象标志,属性和方法</h4><p>标志</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标志</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">g</td>
+<td style="text-align:left">全局匹配</td>
+</tr>
+<tr>
+<td style="text-align:left">i</td>
+<td style="text-align:left">不区分大小写</td>
+</tr>
+<tr>
+<td style="text-align:left">m</td>
+<td style="text-align:left">多行匹配</td>
+</tr>
+</tbody>
+</table>
+<p>方法</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">exec</td>
+<td style="text-align:left">接收一个字符串参数,返回由完全匹配和子表达式匹配结果组成的数组</td>
+</tr>
+<tr>
+<td style="text-align:left">test</td>
+<td style="text-align:left">接收一个字符串参数,返回boolean值</td>
+</tr>
+<tr>
+<td style="text-align:left">compile</td>
+<td style="text-align:left">编译正则表达式</td>
+</tr>
+</tbody>
+</table>
+<p>属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">sourse</td>
+<td style="text-align:left">正则表达式的文本</td>
+</tr>
+<tr>
+<td style="text-align:left">global</td>
+<td style="text-align:left">是否拥有全局搜索标志g</td>
+</tr>
+<tr>
+<td style="text-align:left">ignoreCase</td>
+<td style="text-align:left">是否拥有标志i</td>
+</tr>
+<tr>
+<td style="text-align:left">multiline</td>
+<td style="text-align:left">是否拥有标志m</td>
+</tr>
+<tr>
+<td style="text-align:left">lastIndex</td>
+<td style="text-align:left">搜索匹配的开始位置(可读写)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="noopener">参考链接</a></p>
+</div><div class="entry-extra"><div class="entry-tags"></div></div></div></article></div></main><footer><div class="copyright container"></div><!--    - var currentDate = new Date();--><!--	  - var year = currentDate.getFullYear();--><!--    - var start = config.startYear;--><!--    - year = year == start ? year : (start ? start + ' - ' + year : year);--><!--    p © Copyright #{year} by #[a(href=config.url)!= config.author].	p E-mail: yie@live.cn--></footer><script async src="//cdn.bootcss.com/mathjax/2.7.0-beta.0/MathJax.js"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-69822347-1",'auto');
+ga('set', 'appName',"yie's Blog");
+ga('send','pageview');</script><script>(function () { var sid =500303098;cid =500303108;var hm = document.createElement('script');
+hm.src = 'http://pingjs.qq.com/h5/stats.js';
+hm.setAttribute('name', 'MTAH5'); hm.setAttribute('sid', sid); hm.setAttribute('cid', cid);
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);
+}())</script><script>var _vds = _vds || [];
+window._vds = _vds;
+(function(){
+  ;_vds.push(['setAccountId',"90b580e047dd0007"  ]);
+  (function() {
+      var vds = document.createElement('script');
+      vds.type='text/javascript';
+      vds.async = true;
+      vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(vds, s);
+  })();
+})();</script><script async src="//raw.githack.com/Easyfood/pageAccelerator/master/dist/page-accelerator.min.js"></script><script async src="/script/loading.js"></script><script async src="/script/photo.js"></script></body></html>
