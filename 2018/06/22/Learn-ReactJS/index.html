@@ -1,0 +1,19 @@
+<!DOCTYPE html><html prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Learn ReactJS · yie's Blog</title><meta name="description" content="Learn ReactJS - yie"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.ico"><link rel="stylesheet" href="//at.alicdn.com/t/font_1472710214_6648843.css"><link rel="stylesheet" href="//raw.githack.com/xwartz/hexo-theme-nuna/next/source/style/main.css?v=1.0.3"></head><body class="pupa"><div class="loading-bar"></div><main><div class="post post"><article itemscope itemtype="http://schema.org/Article" class="hentry"><div class="container"><div class="entry-header"><h1 class="entry-title">Learn ReactJS</h1><div class="entry-description"></div><div class="entry-meta"><time itemprop="datePublished" datetime="Friday, June 22nd 2018, 9:15:55 pm" class="updated">Jun 22, 2018</time><em class="post-count">825 words</em></div></div><div itemprop="articleBody" class="entry-content"><p>ReactJS是Facebook开发的UI库,这个库有助于创建交互式,基于状态和可重用的UI库.ReactJS已经用于Facebook自己的Instagram项目.ReactJS不仅可以运行在客户端,也可以用于服务器端,从而使客户端和服务器端协同操作.</p>
+<h4 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h4><p>在Web开发中,需要不断变化数据实时显示在UI上,这时就要操作DOM,复杂频繁操作DOM就会下降Web性能.ReactJS为了解决这个性能瓶颈,引入了虚拟DOM(Virtual DOM),这也是ReactJS最为重要的核心机制之一.ReactJS利用虚拟DOM来减少对真实DOM的操作而提升性能.由于虚拟DOM是在内存中创建的,性能极高.它可以根据状态的变化,有选择的渲染节点和子节点,为了更新部件,ReactJS做尽量少的DOM处理操作.开发者不用关心数据是如何变化的,只需要知道每一次页面渲染对应的整体数据就行了.在ReactJS的开发中,你永远只需要关心整体数据.由于ReactJS使用的是虚拟的DOM,这就产生一种新的可能,我们可以在服务器端渲染虚拟的DOM,快速更新视图.</p>
+<h4 id="组件化思想"><a href="#组件化思想" class="headerlink" title="组件化思想"></a>组件化思想</h4><blockquote>
+<p>组件: 封装起来具有独立功能的UI部件</p>
+</blockquote>
+<p>在虚拟DOM的基础上衍生了ReactJS组件化的开发思路,ReactJS刚出现时,犹如一记重磅炸弹,轰动Web前端领域,原来还可以以这种方式开发网页,ReactJS后来还衍生出了React Native项目,可以通过Web APP的方式去写Native APP,React Native项目在GitHub平台上发布一天之内获得了5000star.ReactJS先进的设计思想也影响了后来的一些的JS框架和库.VueJS就可以寻到一些ReactJS设计思想的影子.</p>
+<p>ReactJS接管了开发UI中最为复杂的局部更新数据的部分.局部更新数据实现的途径就是通过虚拟DOM,局部更新数据最重要就是ReactJS的Diff算法.同时引入组件化的开发思想从另一个角度构建Web前端页面.在ReactJS构建的应用程序中,可以将整个页面视为一个由许多子组件构成的大组件,这样最明显的好处就是增加代码的可用性,一个组件可以在多个UI界面中使用.</p>
+<p>Diff算法基于两种假设:</p>
+<ul>
+<li>不同类型组件产生不同DOM结构</li>
+<li>对于同一层次的一组子组件,可以通过唯一的id进行区分</li>
+</ul>
+<p>ReactJS组件应具备的三个特征:</p>
+<ul>
+<li>可组合: 能够和其它组件一起使用</li>
+<li>可维护: 每个组件只包含自己内部的逻辑代码,更容易维护</li>
+<li>可测试: 测试单个组件内部的逻辑代码相比较于测试整个UI代码更加容易</li>
+</ul>
+</div><div class="entry-extra"><div class="entry-tags"><a href="/tags/React/" class="tag">React</a></div></div></div></article></div></main><footer><div class="copyright container"></div><!--    - var currentDate = new Date();--><!--	  - var year = currentDate.getFullYear();--><!--    - var start = config.startYear;--><!--    - year = year == start ? year : (start ? start + ' - ' + year : year);--><!--    p © Copyright #{year} by #[a(href=config.url)!= config.author].	p E-mail: yie@live.cn--></footer><script async src="//cdn.bootcss.com/mathjax/2.7.0-beta.0/MathJax.js"></script><script async src="//raw.githack.com/Easyfood/pageAccelerator/master/dist/page-accelerator.min.js"></script><script async src="/script/loading.js"></script><script async src="/script/photo.js"></script></body></html>
