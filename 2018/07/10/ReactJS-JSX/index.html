@@ -15,7 +15,7 @@
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我们可以使用引号将字符串文字指定为属性</span></span><br><span class="line"><span class="keyword">const</span> bar = &lt;div tabIndex='0'&gt;&lt;/div&gt;;</span><br></pre></td></tr></table></figure>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我们可以使用大括号在属性中嵌入JavaScript表达式</span></span><br><span class="line"><span class="keyword">const</span> bar = &lt;img src=&#123; user.name &#125;&gt;&lt;/img&gt;;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>在JSX的标签中的同一属性上不能同时使用引号和大括号,JSX中采用<code>cameCase</code>(驼峰式命名)属性命名约定,<code>class</code>属性应该变成<code>className</code>,<code>tabindex</code>应该变成<code>tabIndex</code>,<code>for</code>属性必须变成<code>htmlFor</code>.</p>
+<p>在JSX的标签中的同一属性上不能同时使用引号和大括号,JSX中采用<code>cameCase</code>(驼峰式)属性命名约定,<code>class</code>属性应该变成<code>className</code>,<code>tabindex</code>属性应该变成<code>tabIndex</code>,<code>for</code>属性应该变成<code>htmlFor</code>.</p>
 </blockquote>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在JSX中所有标签都要闭合</span></span><br><span class="line"><span class="keyword">const</span> bar = &lt;img src=&#123; user.name &#125; /&gt;;</span><br></pre></td></tr></table></figure>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在JSX中的标签可以包含子标签</span></span><br><span class="line"><span class="keyword">const</span> bar = (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;Hello!&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;what a wonderful world.&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>div&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
@@ -26,7 +26,7 @@
 <li>JSX表达式可以像JavaScript对象一样,可以被赋值,传参和<code>return</code></li>
 <li>JSX分割成多行时,需要使用<code>()</code>包裹起来,避免浏览器自动插入分号</li>
 <li>JSX中的所有标签必须闭合</li>
-<li>JSX属性采用驼峰式命名,<code>class</code>属性必须写成<code>className</code>,<code>tabindex</code>属性必须写成<code>tabIndex</code>,<code>for</code>属性必须写成<code>htmlFor</code></li>
+<li>JSX属性采用驼峰式命名,<code>class</code>属性应该写成<code>className</code>,<code>tabindex</code>属性应该写成<code>tabIndex</code>,<code>for</code>属性应该写成<code>htmlFor</code></li>
 <li>JSX在渲染之前,所有东西转换为字符串,可以防止XSS攻击</li>
 <li>Babel通过调用<code>React.createElement()</code>API来编译JSX,React必须在JSX代码的作用域内</li>
 <li>JSX通过<code>React.createElement()</code>API将JSX转化为React Object</li>
