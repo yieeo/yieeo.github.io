@@ -1,9 +1,9 @@
-<!DOCTYPE html><html prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>OOP in JavaScript · 🥁 yie's Blog 🎈</title><meta name="description" content="OOP in JavaScript - yie"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.ico"><link rel="stylesheet" href="//at.alicdn.com/t/font_1472710214_6648843.css"><link rel="stylesheet" href="//raw.githack.com/xwartz/hexo-theme-nuna/next/source/style/main.css?v=1.0.3"></head><body class="pupa"><div class="loading-bar"></div><main><div class="post post"><article itemscope itemtype="http://schema.org/Article" class="hentry"><div class="container"><div class="entry-header"><h1 class="entry-title">OOP in JavaScript</h1><div class="entry-description"></div><div class="entry-meta"><time itemprop="datePublished" datetime="Tuesday, April 10th 2018, 5:44:54 pm" class="updated">Apr 10, 2018</time><em class="post-count">2,364 words</em></div></div><div itemprop="articleBody" class="entry-content"><p>对象和类是面向对象的基础, 封装, 继承和多态是面向对象编程(OOP)的三大特性.</p>
+<!DOCTYPE html><html prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>OOP in JavaScript · 🥁 yie's Blog 🎈</title><meta name="description" content="OOP in JavaScript - yie"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.ico"><link rel="stylesheet" href="//at.alicdn.com/t/font_1472710214_6648843.css"><link rel="stylesheet" href="//raw.githack.com/xwartz/hexo-theme-nuna/next/source/style/main.css?v=1.0.3"></head><body class="pupa"><div class="loading-bar"></div><main><div class="post post"><article itemscope itemtype="http://schema.org/Article" class="hentry"><div class="container"><div class="entry-header"><h1 class="entry-title">OOP in JavaScript</h1><div class="entry-description"></div><div class="entry-meta"><time itemprop="datePublished" datetime="Tuesday, April 10th 2018, 5:44:54 pm" class="updated">Apr 10, 2018</time><em class="post-count">2,354 words</em></div></div><div itemprop="articleBody" class="entry-content"><p>对象和类是面向对象的基础, 封装, 继承和多态是面向对象编程(OOP)的三大特性.</p>
 <p>JavaScript提供了对象却缺乏类, 他不能和Java等语言一样显式的定义一个类. 但是JavaScript函数功能非常灵活, 我们可以使用构造函数和原型对象来实现类.</p>
-<h4 id="对象和类的概念"><a href="#对象和类的概念" class="headerlink" title="对象和类的概念"></a>对象和类的概念</h4><p><code>对象</code>是面向对象编程中非常重要的一个概念, 一个对象是一个<code>东西</code>(某个人或者某件事)的描述.<br>对象包含特征和行为, 用OOP的术语来说, 特征是对象的属性, 行为是对象的方法.</p>
-<p><code>类</code>相当于一个模板, 基于这个模板可以创建不同的具体对象.</p>
+<h4 id="对象和类的概念"><a href="#对象和类的概念" class="headerlink" title="对象和类的概念"></a>对象和类的概念</h4><p>对象是面向对象编程中非常重要的一个概念, 一个对象是一个东西(某个人或者某件事)的描述.<br>对象包含特征和行为, 用OOP的术语来说, 特征是对象的属性, 行为是对象的方法.</p>
+<p>类相当于一个模板, 基于这个模板可以创建不同的具体对象.</p>
 <blockquote>
-<p>在JavaScript中一切都是基于对象的, <code>原型</code>也是对象, JavaScript的继承和重用也是通过原型实现的.</p>
+<p>在JavaScript中一切都是基于对象的, 原型也是对象, JavaScript的继承和重用也是通过原型实现的.</p>
 </blockquote>
 <h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><p>我们可以使用<code>new Array()</code>创建一个数组, 使用<code>new Object()</code>创建一个对象. <code>Array()</code>和<code>Object()</code>是JavaScript内置的两个构造函数, 尽管JavaScript没有提供类, 我们可以将Array和Object理解为”类”的概念.</p>
 <p>构造函数也是函数, 定义构造函数和其它函数并没有语法上的区别. 唯一的区别就是构造函数的首字母应该大写, 这也是JavaScript的编程规范.</p>
@@ -24,11 +24,11 @@
 <p>我们可以通过<code>hasOwnPrototype</code>方法查看对象是否包含某个属性或方法.</p>
 </blockquote>
 <h4 id="类的实现总结"><a href="#类的实现总结" class="headerlink" title="类的实现总结"></a>类的实现总结</h4><ul>
-<li>JavaScript没有类,但是构造函数可以实现<code>类</code></li>
+<li>JavaScript没有类,但是构造函数可以实现类</li>
 <li>按照JavaScript编程规范,构造函数的首字母应该大写</li>
 <li>在创建对象时,JavaScript为这个对象分配了一个<code>constructor</code>属性,<code>constructor</code>属性是对象构造函数的引用</li>
 <li>函数在定义时拥有了<code>prototype</code>属性,<code>prototype</code>属性也是一个对象</li>
-<li>prototype属性上的属性和方法是共享的,定义在<code>prototype</code>属性的属性和方法可以被”类”的实例对象使用</li>
+<li>prototype属性上的属性和方法是共享的,定义在<code>prototype</code>属性的属性和方法可以被类的实例对象使用</li>
 <li>如果属性或者方法能够定义在<code>prototype</code>属性上,就不要定义在构造函数中,使用<code>prototype</code>可以减少内存开销</li>
 </ul>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript" target="_blank" rel="noopener">参考链接</a></p>
